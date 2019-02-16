@@ -23,12 +23,11 @@ $(call inherit-product-if-exists, vendor/xiaomi/MiuiCamera/config.mk)
 # Inherit from whyred device
 $(call inherit-product, device/xiaomi/whyred/device.mk)
 
-# Inherit some common ArrowOS stuff.
+# Inherit some common GZOSP stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
-$(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product, vendor/gzosp/config/common_full_phone.mk)
 
-PRODUCT_NAME := arrow_whyred
+PRODUCT_NAME := gzosp_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi

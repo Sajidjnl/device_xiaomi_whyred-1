@@ -1,3 +1,5 @@
+Copyright (C) 2018-2019 The MoKee Open Source Project
+
 The Redmi Note 5 (codenamed _"whyred"_) are high-end mid-range smartphones from Xiaomi.
 
 Xiaomi Redmi Note 5 was announced and released in March 2018.

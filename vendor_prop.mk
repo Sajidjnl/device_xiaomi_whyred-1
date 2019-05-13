@@ -1,3 +1,12 @@
+# ART
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-filter=speed \
+    dalvik.vm.image-dex2oat-filter=speed \
+    ro.vendor.qti.am.reschedule_service=true \
+    ro.sys.fw.dex2oat_thread_count=8 \
+    dalvik.vm.boot-dex2oat-threads=8 \
+    dalvik.vm.dex2oat-threads=8
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.job_delay=true \
     persist.sys.mcd_config_file=/system/etc/mcd_default.conf \
@@ -191,6 +200,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi
 
+# Boot
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.vendor.shutdown.waittime=500
+
 #disable UBWC for camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.preview.ubwc=0 \
@@ -240,7 +253,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.rat_on=combine
 
 # Make data selection stick in dual SIM devices
-persist.radio.aosp_usr_pref_sel=true
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.radio.aosp_usr_pref_sel=true
 
 # the level of data wiping under PRESET mode
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -315,7 +329,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #Bringup properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.atfwd.start=true
+    persist.vendor.radio.atfwd.start=true
 
 #set maximum supported adapter voltage
 PRODUCT_PROPERTY_OVERRIDES += \
